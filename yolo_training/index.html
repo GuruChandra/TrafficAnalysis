@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLOv8 Inference</title>
+</head>
+<body>
+    <h2>Upload Image for YOLOv8 Detection</h2>
+
+    <form id="upload-form" action="/predict/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit">Upload Image</button>
+    </form>
+
+    <h3>Detection Result:</h3>
+    <img id="output-image" width="600">
+
+    <script>
+        const form = document.getElementById('upload-form');
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            const response = await fetch('/predict/', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const imageBlob = await response.blob();
+                const imageObjectURL = URL.createObjectURL(imageBlob);
+                document.getElementById('output-image').src = imageObjectURL;
+            } else {
+                alert("Image processing failed.");
+            }
+        };
+    </script>
+</body>
+</html>

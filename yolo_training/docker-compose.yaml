@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  app:
+    image: yolo_fastapi_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../pretrained_models:/app/pretrained_models  # 👈 Shared volume
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

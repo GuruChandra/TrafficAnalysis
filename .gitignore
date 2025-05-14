@@ -1,0 +1,191 @@
+# -------------------------------
+# Python Bytecode and C Extensions
+# -------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.dylib
+
+# -------------------------------
+# Virtual Environments
+# -------------------------------
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# -------------------------------
+# Environment variables and Credentials
+# -------------------------------
+.env
+.env.local
+.env.*.local
+credentials.json
+secrets.json
+
+# -------------------------------
+# Docker and Kubernetes
+# -------------------------------
+docker-compose.override.yml
+.docker/
+docker.env
+*.pid
+*.log
+*.sock
+.dockerignore
+.kube/
+# Keep main Docker files versioned
+!Dockerfile
+!docker-compose.yml
+!docker-compose.yaml
+
+# -------------------------------
+# Flask / FastAPI / Django
+# -------------------------------
+instance/
+.pytest_cache/
+*.sqlite3
+*.db
+db.sqlite3
+media/
+staticfiles/
+
+# -------------------------------
+# MLOps and Model Artifacts
+# -------------------------------
+mlruns/
+models/
+weights/
+artifacts/
+checkpoints/
+logs/
+runs/
+*.h5
+*.pt
+*.ckpt
+*.onnx
+*.tflite
+*.pb
+*.joblib
+*.pkl
+*.npy
+*.npz
+*.pyd
+
+# -------------------------------
+# Data and Datasets
+# -------------------------------
+data/
+datasets/
+*.csv
+*.json
+*.parquet
+*.txt
+*.tsv
+*.yaml
+*.yml
+*.xls
+*.xlsx
+*.zip
+*.tar.gz
+*.7z
+*.hdf5
+*.xml
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tif
+*.tiff
+
+# If you want to keep some images for UI or documentation, unignore them
+!docs/images/
+
+# -------------------------------
+# Jupyter Notebooks
+# -------------------------------
+.ipynb_checkpoints
+*.ipynb
+notebooks/.ipynb_checkpoints/
+notebooks/*.ipynb
+
+# -------------------------------
+# VS Code, PyCharm, JetBrains
+# -------------------------------
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# -------------------------------
+# Test, Coverage, and Debugging
+# -------------------------------
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+*.pytest_cache/
+.cache
+*.pytest_cache
+nosetests.xml
+htmlcov/
+.tox/
+pytestdebug.log
+
+# -------------------------------
+# Build Artifacts
+# -------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+parts/
+sdist/
+wheels/
+*.manifest
+*.spec
+*.cache
+
+# -------------------------------
+# CI/CD (GitHub Actions, GitLab CI, Jenkins, etc.)
+# -------------------------------
+.github/
+.gitlab-ci.yml
+.jenkinsfile
+.circleci/
+buildspec.yml
+cloudbuild.yaml
+
+# -------------------------------
+# Ansible, Terraform, Packer
+# -------------------------------
+packer_cache/
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.retry
+
+# -------------------------------
+# AWS, GCP, Azure Credentials
+# -------------------------------
+.aws/
+.gcloud/
+azure-credentials.json
+
+# -------------------------------
+# System and OS Files
+# -------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.nfs*
